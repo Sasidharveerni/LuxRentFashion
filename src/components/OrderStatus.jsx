@@ -20,7 +20,7 @@ const center = { lat: 16.7107, lng: 81.0952 };
 function OrderStatus() {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: "AIzaSyCm8g5Ch3GwqK_YMpXIYky6UdevwE0cG1k"
+    googleMapsApiKey: process.env.Api_key
   });
 
   const userAddress = useSelector(state => state.addressReducer.address);
