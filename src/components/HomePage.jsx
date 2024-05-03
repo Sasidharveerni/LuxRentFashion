@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../App.css';
 import Stock1Image from '../assets/Stock1.png';
 import Stock2Image from '../assets/Stock2.png';
@@ -9,6 +9,12 @@ import { NavLink } from 'react-router-dom';
 
 function HomePage() {
     const section = ['How LuxRentFashion Works', 'Join LuxRentFashion Team', 'Download our app'];
+
+    const [value, setValue] = useState('');
+
+    const search = () => {
+        localStorage.setItem("Searched-text",value)
+    }
 
 
     return (
@@ -22,8 +28,8 @@ function HomePage() {
                         RENTALS
                     </h1>
                 </div>
-                <div>
-                    <button className='normal-button'>Sign in</button>
+                <div className='home-btn'>
+                    <button className='normal-button '>Sign in</button>
                     <button className='custom-button'>Sign up</button>
                 </div>
             </div>
@@ -34,26 +40,33 @@ function HomePage() {
                 <h1 style={{ textAlign: 'center', fontWeight: 'bolder', fontSize: '3em' }}>Discover the finest rentals <br /> for your special occasions</h1>
                 <img src={Stock2Image} alt='stock-2' width={100} height={100} style={{ float: 'right' }} />
 
-                <div style={{ textAlign: 'center', marginTop: '30px', marginLeft: '30px' }}>
-
+                <div className='input-field' style={{ textAlign: 'center', marginTop: '30px', marginLeft: '30px' }}>
+                    <div className='inputs'>
                     <input type='text'
                         placeholder='Search for items'
                         name='search'
                         style={{
-                            border: '1px solid black', width: '30%', marginRight: '15px', height: '30px', paddingLeft: '20px', // Padding for the icon
+                            border: '1px solid black', marginRight: '15px', height: '30px', paddingLeft: '20px', // Padding for the icon
                             backgroundImage: 'url("../assets/search-icon.png")', // URL of the icon image
                             backgroundRepeat: 'no-repeat',
                             backgroundPosition: '5px center', // Position the icon 5px from the left and centered vertically
                             backgroundSize: '16px 16px', // Size of the icon}}
-                        }} />
-                    <button className='custom-button' style={{ width: '80px', height: '30px' }}>
-                        <NavLink to="/search">Search</NavLink>
+                        }}
+                        value={value} 
+
+                        onChange={(e) => setValue(e.target.value)}
+                        
+                        />
+                    </div>
+
+                    <button onClick={search} className='custom-button' style={{ width: '80px', height: '30px' }}>
+                        <NavLink to="/products">Search</NavLink>
                     </button>
                 </div>
             </div>
             <div style={{textAlign: 'center', margin: '3rem'}}>
 
-            <button className='team-btn' style={{ width: '20vw', height: '6vh' }}>
+            <button className='team-btn' style={{ width: '150px', height: '30px' }}>
                         <NavLink to="/products">Browse/Rent Products</NavLink>
                     </button>
             </div>

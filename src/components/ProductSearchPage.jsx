@@ -29,7 +29,8 @@ function ProductSearchPage() {
         ['(7,102)', '(4,200)', '(901)', '(1,301)']
     ];
 
-    
+    const usertext = localStorage.getItem("Searched-text")
+
 
     return (
         <>
@@ -48,9 +49,10 @@ function ProductSearchPage() {
                                     border: '1px solid rgba(0, 0, 0, 0.3)', marginRight: '1rem', height: '6vh', width: '20vw'  // Padding for the icon
                                     ,borderRadius: '10px'
                                 }}
+                                className='product-search'
                             />
                         </div>
-                        <div>
+                        <div className='search-btn'>
                             <button className='custom-button' style={{ width: '50px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                 <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/000000/search--v1.png" alt="search--v1" />
                             </button>
@@ -63,6 +65,14 @@ function ProductSearchPage() {
                      </NavLink>
 
                      
+                </div>
+
+                <hr />
+
+                <div className='search-res'>
+           
+                   <h1 className='heading'>Search Results for " {usertext} "</h1>
+
                 </div>
 
                 <hr />
@@ -83,7 +93,7 @@ function ProductSearchPage() {
             </div>
 
             <div>
-                <div style={{ display: 'flex', justifyContent: 'space-evenly', alignItems: 'center', marginTop: '1rem' }}>
+                <div className='filters' style={{ display: 'flex', justifyContent: 'space-evenly', alignItems: 'center', marginTop: '1rem' }}>
 
                     <img src={star} alt='' style={{ width: '2rem', height: '2rem' }} className='liners' />
 
@@ -133,7 +143,7 @@ function ProductSearchPage() {
 
                 </div>
 
-                <div style={{ display: 'flex', flexWrap: 'wrap', margin: '3rem' }}>
+                <div className='products' style={{ display: 'flex', flexWrap: 'wrap', margin: '3rem' }}>
                     <ProductItem />
                 </div>
 

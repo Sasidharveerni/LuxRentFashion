@@ -102,6 +102,10 @@ hr {
   margin-bottom: 1rem;
 }
 
+.search-res{
+  margin-top: 2rem;
+}
+
 .outfit-opt {
   width: 6rem;
   height: 1.5rem;
@@ -144,6 +148,8 @@ hr {
   border-color: #EFEE17;
 }
 
+
+
 /* Styles for placeholders */
 ::placeholder {
   color: #aaa;
@@ -153,5 +159,120 @@ hr {
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
+
+@media only screen and (max-width: 640px) {
+  body {
+    font-size: medium !important;
+  }
+  .home-btn {
+    display: flex;
+  }
+  .home-btn button {
+    width: 5rem;
+  }
+  .home-header h1 {
+    float: left;
+    font-size: small;
+    margin-right: 3rem;
+  }
+  .header-2 img {
+        display: none;
+  }
+  .header-2 h1 {
+    margin-top: 2rem;
+  }
+  .input-field input {
+   width: 90%;
+   margin-bottom: 2rem;
+  }
+  .custom-button {
+    margin-right: 1rem;
+    width: 7rem !important;
+  }
+  .headers , .filters{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 1rem;
+    margin-bottom: 2rem;
+    font-size: small;
+  }
+  .headers img {
+    width: 5vw;
+  }
+
+  .product-search, .filter-section  {
+    display: none;
+  }
+
+  .search-btn {
+    display: none;
+  }
+
+  .products {
+   display: flex !important;
+   justify-content: center !important;
+   align-items: center !important;
+   margin: 0 !important;
+  }
+
+  .footer p {
+         font-size: small;
+         width: 15rem;
+  }
+
+  .container {
+    display: block;
+  }
+
+  .footer-input {
+    width: 15rem !important;
+  }
+
+  .footer-about {
+    display: block !important;
+    margin-top: 2rem;
+  }
+
+  .check-out-btn {
+    height: 3rem;
+    text-align: center !important;
+  }
+  .check-out-btn button{
+    font-size: smaller;
+    width: 10rem !important;
+    height: 1rem !important;
+    padding-bottom: 2rem !important;
+  }
+ .outfit-opt button {
+    font-size: small;
+    width: 5rem !important;
+  }
+
+  .formalwear {
+    display: inline !important;
+  }
+
+  .trending {
+    width: 5rem !important;
+  }
+  .formal-product {
+    margin-right: 2rem;
+    
+  }
+
+  .order, .order-status  {
+    margin-left: 1rem !important;
+  }
+
+  .order-status {
+    width: 30rem !important;
+  }
+
+   
+
+
+}
+
+
 
 

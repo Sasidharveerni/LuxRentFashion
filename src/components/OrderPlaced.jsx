@@ -18,9 +18,9 @@ const OrderPlaced = () => {
           </div>
           </div>
         </div>
-        <div style={{ margin: '0 auto', maxWidth: '800px', textAlign: 'center', marginLeft: '10rem' }}>
+        <div className='order' style={{ margin: '0 auto', maxWidth: '800px', textAlign: 'center', marginLeft: '10rem' }}>
           <h1 style={{ fontSize: '2em', marginBottom: '1rem' }}>Your order is on the way!</h1>
-            <div style={{marginLeft: '10rem'}}>
+            <div className='order-status' style={{marginLeft: '10rem'}}>
 
             <OrderStatus />
             </div>

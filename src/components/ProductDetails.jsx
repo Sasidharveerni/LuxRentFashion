@@ -76,7 +76,7 @@ function ProductDetails() {
 
 <div className='home-header' style={{marginBottom: '1.5rem'}}>
 
-<div>
+<div className='check-out-btn'>
   <NavLink to='/confirm/order'>
     <button className='custom-button'>Proceed to checkout</button>
   </NavLink>
@@ -92,7 +92,7 @@ function ProductDetails() {
           <h1>Complete the outfit</h1>
         </div>
 
-        <div style={{ display: 'flex' }}>
+        <div className='formalwear' style={{ display: 'flex' }}>
           <div className='outfit-opt-1'>
             <button>
               Trending

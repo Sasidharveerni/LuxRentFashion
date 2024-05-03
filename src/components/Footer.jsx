@@ -5,7 +5,7 @@ import MapImg from '../assets/Icon map.png';
 
 function Footer() {
     return (
-        <>
+        <div className='footer'>
             <hr />
             <div className='container' style={{ marginLeft: '10px', justifyContent: 'space-between', marginTop: '40px' }}>
                 <div style={{ marginTop: '30px' }}>
@@ -20,6 +20,7 @@ function Footer() {
                             border: '1px solid rgba(0, 0, 0, 0.3)', width: '300px', marginRight: '10px', height: '30px', paddingLeft: '5px', // Padding for the icon
 
                         }}
+                        className='footer-input'
                     />
                     <button className='custom-button' style={{ width: '100px', height: '30px' }}>Subscribe</button>
                 </div>
@@ -41,7 +42,7 @@ function Footer() {
                     </div>
                 </div>
 
-                <div style={{ display: 'flex', justifyContent: 'space-evenly', alignItems: 'center' }}>
+                <div className='footer-about' style={{ display: 'flex', justifyContent: 'space-evenly', alignItems: 'center' }}>
 
                     <div>
                         <p className='liners' style={{fontWeight: 'bolder'}}>Help Center</p>
@@ -67,7 +68,7 @@ function Footer() {
                 </div>
             
            
-        </>
+        </div>
     )
 }
 

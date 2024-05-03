@@ -64,7 +64,7 @@ function ProductItem() {
     <>
       {productImages.map((img, ind) => (
         <div key={ind} style={{ marginRight: '1rem', position: 'relative' }}>
-          <div style={{ position: 'relative', display: 'inline-block', width: 'fit-content' }}>
+          <div  style={{ position: 'relative', display: 'inline-block', width: '10rem' }}>
             <img src={img} alt='' />
             <div className='outfit-opt-1' style={{ position: 'absolute', bottom: '0.5rem', left: '50%', transform: 'translateX(-50%)' }}>
               <button onClick={() => { decrementCount(img); removeImage(img); }} style={{ marginRight: '1rem' }}>

@@ -29,13 +29,13 @@ function FormalWear({ imgUrl, formalHeadings, formalDesc, formalPrice }) {
     return (
         <>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '1rem', marginBottom: '1rem' }}>
-                <div>
+                <div className='formal-product'>
                     <p style={{ fontWeight: 'bolder' }}>{formalHeadings}</p>
                     <p className='liners'>{formalDesc}</p>
                     <div style={{ display: 'flex', marginTop: '1rem' }}>
                         <p>₹ {formalPrice}</p>
 
-                        <div className='outfit-opt-1' style={{ margin: '0', marginLeft: '1rem' }}>
+                        <div className='outfit-opt-1 trending' style={{ margin: '0', marginLeft: '1rem' }}>
                             <button>Trending</button>
                         </div>
 
